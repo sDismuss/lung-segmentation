@@ -1,0 +1,8 @@
+.idea/
+__pycache__/
+
+!processed_data/weight_lung.hdf5
+
+input/3d_images/
+output/
+processed_data
