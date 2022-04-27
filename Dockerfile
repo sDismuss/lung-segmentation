@@ -10,5 +10,7 @@ RUN pip3 install keras nibabel scipy tensorflow matplotlib sklearn
 
 RUN git clone https://github.com/rezazad68/BCDU-Net.git  /project
 
+COPY . /project
+
 WORKDIR /project
 CMD ["python3", "test.py"]
