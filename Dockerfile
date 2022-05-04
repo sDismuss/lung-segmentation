@@ -1,16 +1,22 @@
 FROM ubuntu:20.04
 
-RUN apt update
-RUN apt install -y sudo
+WORKDIR /workdir
+
+RUN apt update && apt install -y sudo
 RUN sudo apt update && sudo apt -y upgrade
-RUN sudo apt install -y python3 && python3 -V
-RUN sudo apt install -y python3-venv python3-pip git && python3 -m venv lung_env && . lung_env/bin/activate
+RUN sudo apt install -y python3 \
+                        python3-venv \
+                        python3-pip \
+                        git
 
-RUN pip3 install keras nibabel scipy tensorflow matplotlib sklearn
+RUN python3 -m venv lung_env && . lung_env/bin/activate
+RUN pip3 install keras \
+                 nibabel \
+                 scipy \
+                 tensorflow \
+                 matplotlib \
+                 sklearn
 
-RUN git clone https://github.com/rezazad68/BCDU-Net.git  /project
+COPY . /workdir
 
-COPY . /project
-
-WORKDIR /project
-CMD ["python3", "test.py"]
+RUN python3 test.py
