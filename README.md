@@ -6,7 +6,11 @@
 ![Пример работы](sample_results.png "Пример работы")
 
 ## Предварительная подготовка
-- Git Bash
+1. Скачать приложение Git Bash
+2. Скачать изображения: [3d_images](https://www.kaggle.com/datasets/kmader/finding-lungs-in-ct-data?select=3d_images.zip) (3d изображений достаточно).  
+Архив нужно распаковать в папку input рядом с example.  
+3. Скачав следующий файл: [weight](https://drive.google.com/open?id=1pHOntUOdqd0MSz4cHUOHi2Ssn3KBH-fU).
+Файл нужно положить в папку processed_data
 
 ## Основная установка
 Скачать проект с GitHub
@@ -23,17 +27,13 @@ docker run -it --name lung-container lung-seg
   
 ## Основные команды
 1. Подготовка изображений  
-Скачать изображения можно отсюда: [3d_images](https://www.kaggle.com/datasets/kmader/finding-lungs-in-ct-data?select=3d_images.zip) (3d изображений достаточно).  
-Архив нужно распаковать в папку input рядом с example.  
-  
 Следующая команда подготовит изображения  
 ```
 python Prepare_data.py
 ```
   
 2. Тренировка модели  
-Эту часть можно пропустить, скачав следующий файл: [weight](https://drive.google.com/open?id=1pHOntUOdqd0MSz4cHUOHi2Ssn3KBH-fU)  
-Данный файл нужно поместить в папку processed_data (создайте, если он отсутствует
+Эту часть можно пропустить.
   
 При желании можно запустить следующую команду, чтобы положить тот же результат  
 ```
