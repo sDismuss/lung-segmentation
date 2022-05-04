@@ -7,9 +7,9 @@ import Reza_functions as RF
 import models as M
 
 print("Starting test.py...")
-IMG = 'input/test_files/IMG_0078.nii.gz'
-MASK = 'input/test_files/MASK_0078.nii.gz'
-WEIGHT = 'input/test_files/weight_lung.hdf5'
+IMG = 'input/example/IMG_0078.nii.gz'
+MASK = 'input/example/MASK_0078.nii.gz'
+WEIGHT = 'input/example/weight_lung.hdf5'
 
 if (os.path.exists(IMG) and
     os.path.exists(MASK) and
