@@ -18,6 +18,7 @@ git clone https://github.com/sDismuss/lung-segmentation.git
 Следующий шаг заключается в том, чтобы из консоли построить проект
 ```
 docker build -t lung-seg .
+docker run -it --name lung-container lung-seg
 ```
   
 ## Основные команды
