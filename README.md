@@ -19,7 +19,7 @@ git clone https://github.com/sDismuss/lung-segmentation.git
   
 2. В консоли переходим в папку с проектом  
 3. Файл weight помещаем в папку input/example
-4. Архив 3d_images распаковываем в папку input рядом с example
+4. В папке input создаём папку 3d_images, куда складываем все архивы с названием "IMG..." и "MASK..." из архива 3d_images
 5. Строим из консоли проект  
 Заходим в папку с проектом (через команду cd) и выполняем docker команды 
 *Примечание:* Убедитесь, что докер запущен  
@@ -32,7 +32,7 @@ docker run -it --name lung-container lung-seg
 1. Подготовка изображений  
 Следующая команда подготовит изображения  
 ```
-python Prepare_data.py
+python3 Prepare_data.py
 ```
   
 2. Тренировка модели  
@@ -40,13 +40,13 @@ python Prepare_data.py
   
 При желании можно запустить следующую команду, чтобы положить тот же результат  
 ```
-python train_lung.py
+python3 train_lung.py
 ```
   
 3. Проверка модели
 Для получения результатов тренировки модели запустите следующую команду
 ```
-python evaluate_perfomance.py
+python3 evaluate_perfomance.py
 ```
   
 ## Некоторые примечания
