@@ -8,18 +8,21 @@
 ## Предварительная подготовка
 1. Скачать приложение Git Bash
 2. Скачать изображения: [3d_images](https://www.kaggle.com/datasets/kmader/finding-lungs-in-ct-data?select=3d_images.zip) (3d изображений достаточно).  
-Архив нужно распаковать в папку input рядом с example.  
 3. Скачав следующий файл: [weight](https://drive.google.com/open?id=1pHOntUOdqd0MSz4cHUOHi2Ssn3KBH-fU).
-Файл нужно положить в папку processed_data (создай, если не существует), а также в папку input/example
 
 ## Основная установка
-Скачать проект с GitHub
+1. Скачать проект с GitHub  
+*Примечание:* Рекомендуется воспользоваться консолью Git Bash  
 ```
 git clone https://github.com/sDismuss/lung-segmentation.git
 ```
-*Примечание:* Рекомендуется воспользоваться консолью Git Bash  
   
-Следующий шаг заключается в том, чтобы из консоли построить проект
+2. В консоли переходим в папку с проектом  
+3. Файл weight помещаем в папку input/example
+4. Архив 3d_images распаковываем в папку input рядом с example
+5. Строим из консоли проект  
+Заходим в папку с проектом (через команду cd) и выполняем docker команды 
+*Примечание:* Убедитесь, что докер запущен  
 ```
 docker build -t lung-seg .
 docker run -it --name lung-container lung-seg
@@ -33,7 +36,7 @@ python Prepare_data.py
 ```
   
 2. Тренировка модели  
-Эту часть можно пропустить.
+Эту часть можно пропустить, положив файл weight в папку processed_data.
   
 При желании можно запустить следующую команду, чтобы положить тот же результат  
 ```
