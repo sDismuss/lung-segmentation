@@ -46,7 +46,7 @@ python3 train_lung.py
 3. Проверка модели
 Для получения результатов тренировки модели запустите следующую команду
 ```
-python3 evaluate_perfomance.py
+python3 evaluate_performance.py
 ```
   
 ## Некоторые примечания
