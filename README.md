@@ -10,7 +10,7 @@
 2. Скачать изображения: [3d_images](https://www.kaggle.com/datasets/kmader/finding-lungs-in-ct-data?select=3d_images.zip) (3d изображений достаточно).  
 Архив нужно распаковать в папку input рядом с example.  
 3. Скачав следующий файл: [weight](https://drive.google.com/open?id=1pHOntUOdqd0MSz4cHUOHi2Ssn3KBH-fU).
-Файл нужно положить в папку processed_data
+Файл нужно положить в папку processed_data (создай, если не существует), а также в папку input/example
 
 ## Основная установка
 Скачать проект с GitHub
